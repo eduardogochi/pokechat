@@ -12,6 +12,13 @@ const app = express();
 
 //Configure static files route
 app.use('/', express.static(__dirname + '/public'));
+
+app.get('/pokemons', (req, res) => {
+	dbapi.pokemons.find((pokemons) => {
+		res.json(pokemons);
+	})
+});
+
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/index.html');
 })
