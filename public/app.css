@@ -100,5 +100,5 @@ ul > li {
 }
 
 .message-animation-leave{
-
+	opacity: 1;
 }
